@@ -1,8 +1,6 @@
 respawn="BASE";
 aiKills = 1;
 
-author="Dodek";
-OnLoadName = "Capture and Hold - Agia Marina [M]";
 
 class Header
 {
@@ -50,14 +48,10 @@ class Params
 		};
 };
 respawnDelay = paramsArray select 4;
-
 author = Auraxian Pilots Guild;
 onLoadName = "Chopper Air Domination";
 onloadmission = "Chopper Air Domination";
 loadscreen = "images\APGLogo10.jpg"
-respawn = 3
-respawnTemplates[] = {"Base","Tickets","EndMission"};
-respawnDelay = 5;
 respawnVehicleDelay = 1;
 disabledAI = true;
 joinUnassigned = 0;
