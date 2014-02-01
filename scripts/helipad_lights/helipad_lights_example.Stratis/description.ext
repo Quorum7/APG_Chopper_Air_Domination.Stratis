@@ -1,0 +1,5 @@
+author = "JoeJoe";
+onLoadName = "Helipad Lights Example Mission";
+OnLoadMission = "Showcase for the Helipad Lights Script";
+overviewText = "Showcase for the Helipad Lights Script";
+overviewTextLocked = "Helipad Lights Example Mission";

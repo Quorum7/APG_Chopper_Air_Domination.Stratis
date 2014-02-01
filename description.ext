@@ -1,0 +1,127 @@
+
+class Header
+{
+  gameType = Unknown;
+  minPlayers = 1;
+  maxPlayers = 14;
+};
+class Params
+{
+	class AA
+		{
+			title = "Neutral AA on Island";
+			values[] = {0,1};
+			texts[] = {"No","Yes"};
+			default = 0;
+		};
+		class TicketsWest
+		{
+			title = "Number of BLUFOR Tickets";
+			values[] = {10,20,30,40};
+			texts[] = {"10","20","30","40"};
+			default = 30;
+		};
+		class TicketsEast
+		{
+			title = "Number of OPFOR Tickets";
+			values[] = {10,20,30,40};
+			texts[] = {"10","20","30","40"};
+			default = 30;
+		};
+	class TimeOfDay 
+		{
+			title = "Time of Day";
+			values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
+			texts[] = {"0000","0100","0200","0300","0400","0500","0600","0700","0800","0900","1000","1100","1200","1300","1400","1500","1600","1700","1800","1900","2000","2100","2200","2300"};
+			default = 0440;
+		};
+	class Weather 
+		{
+			title = "Weather";
+			values[] = {1,2,3};
+			default = 1;
+			texts[] = {"Clear", "Stormy", "Cloudy"};
+		};
+	class Fog
+		{
+			title = "Fog";
+			values[] = {1,2,3,4};
+			default = 1;
+			texts[] = {"None", "Low Density","Medium Density","Can't See Shit"};
+		};
+	class TicketDisplay
+		{
+			title = "Show Ticket Counter";
+			values[] = {1,2};
+			default = 1;
+			texts[] = {"Yes","No"};
+		};	
+	class TicketEnable
+		{
+			title = "Disable Tickets CAUSES BUGS SO DON'T USE";
+			values[] = {1,2};
+			default = 2;
+			texts[] = {"Yes","No"};
+		};	
+};
+class CfgDebriefing
+{  
+	class end1
+	{
+		title = "OPFOR Wins!";
+		subtitle = "BLUFOR Tickets Exhausted";
+		description = "";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {};
+	};
+	class end2
+	{
+		title = "BLUFOR Wins!";
+		subtitle = "OPFOR Tickets Exhausted";
+		description = "";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {};
+	};
+};
+class RscTitles
+{
+	class TicketProgress
+	{    
+		idd = -1;
+		duration = 16;
+		fadein = 0;
+		onLoad = uiNamespace setVariable ['hg_hud', _this select 0];
+		class controls
+		{
+			class ExampleControl
+			{    
+				idc = -1;
+				type = 0;
+				style = 530 ;
+				x = 1.2; 
+				y = -0.15;
+				w = 0.37;
+				h = 0.06;
+				lineSpacing = 1
+				font = "EtelkaNarrowMediumPro";
+				sizeEx = 0.027
+				colorBackground[] = {0.07,0.07,0.07,0.5};
+				colorText[] = {1,1,1,1};
+				shadow = 1
+				text = 
+			};  
+		};	
+	};
+};
+author = Auraxian Pilots Guild;
+onLoadName = "Chopper Air Domination";
+onloadmission = "Chopper Air Domination";
+loadscreen = "images\APGLogo10.jpg"
+respawn = 3
+respawnTemplates[] = {"Base","Tickets","EndMission"};
+respawnDelay = 5;
+respawnVehicleDelay = 1;
+disabledAI = true;
+joinUnassigned = 0;
