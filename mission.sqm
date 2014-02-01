@@ -4994,7 +4994,7 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			name="Helipad_8_1";
-			expCond="(getPos ((list Helipad_8) select 0) select 2) <= 1";
+			expCond="(getPos ((list Helipad_8_1) select 0) select 2) <= 1";
 			expActiv="_xhandle= (thislist select 0) execVM ""x_reload.sqf"";";
 			class Effects
 			{
